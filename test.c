@@ -824,13 +824,13 @@ o/p=123123
 // }
 
 
-// adding and multiping three numbers
-// #include<stdio.h>
-// int main(){
-//     int a,b,c;
-//     printf("enter the three numbers:");
-//     scanf("%d%d%d",&a,&b,&c);
-//     printf("the sum of three numbers is %d\n",a+b+c);
-//     printf("the product of three numbers is %d\n",a*b*c);
-//     return 0;
-// }
+adding and multiping three numbers
+#include<stdio.h>
+int main(){
+    int a,b,c;
+    printf("enter the three numbers:");
+    scanf("%d%d%d",&a,&b,&c);
+    printf("the sum of three numbers is %d\n",a+b+c);
+    printf("the product of three numbers is %d\n",a*b*c);
+    return 0;
+}
