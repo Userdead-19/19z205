@@ -22,8 +22,8 @@
 //     fgets(a,10,stdin);
 //     int len;
 //     printf("enter a number:");
-    
-//     printf("the number is :%d",len);    
+
+//     printf("the number is :%d",len);
 //     printf("\nenter the next name:");
 //     gets(c);
 //     printf("%s",c);
@@ -52,7 +52,7 @@
 //     fgets(str, sizeof(str), stdin);
 
 //     printf("the size of the string:");
-//     scanf("%d",&n); 
+//     scanf("%d",&n);
 
 //     printf("You entered: %s and %d", str, n);
 
@@ -66,7 +66,7 @@
 //     int n;
 //     printf("enter the variable :");
 //     gets(name);
-    
+
 //     printf(">>");
 //     scanf("%d",&n);
 //     printf("the name is :%s",name);
@@ -121,7 +121,7 @@
 // #include<conio.h>
 // void main(){
 //  int a=10,*b,**c,***d;  //-12,-14,-16,-18
- 
+
 //   b=&a; //-12
 //   c=&b; //-14
 //   d=&c; //-16
@@ -130,7 +130,7 @@
 //   printf("\n c : %d , *c : %d, **c : %d",c,*c,**c);
 //   **c=100;
 //     printf("\na : %d",a);
- 
+
 //  }
 
 
@@ -167,7 +167,7 @@
 
 // adding and multiping 3 numbers
 
-//how does complier find header files in c 
+//how does complier find header files in c
 
 //header file path
 
@@ -233,11 +233,11 @@
 
 // #include<stdio.h>
 // #include<math.h>
-// void main(){    
+// void main(){
 //     for(int i=0;i<=1000;i++){
 //         double x= pow(9,i);
 //         printf("%Lf\n",x);
-//     }  
+//     }
 // }
 
 // #include<stdio.h>
@@ -297,7 +297,7 @@
 //    }
 // }
 
-// // pattern 
+// // pattern
 
 // #include<stdio.h>
 // void main(){
@@ -394,7 +394,7 @@ o/p=123123
 //    printf("%d",j);
 //   if(j%2==0){
 //    printf("");
-//   } 
+//   }
 // }
 
 
@@ -447,7 +447,7 @@ o/p=123123
 //   //for(int i=0;)
 // }
 
-//consider an array with base address B the index starts from 0 and the elements maybe in rmo or cmo in the index x,y is given must return the adress of the variable 
+//consider an array with base address B the index starts from 0 and the elements maybe in rmo or cmo in the index x,y is given must return the adress of the variable
 //total no rows is r and total number of columns is c
 
 // #include<stdio.h>
@@ -630,11 +630,11 @@ o/p=123123
 //          printf("enter the two numbers with space:");
 //          scanf("%d%d",&a,&b);
 //          printf("%d\n>>",(float)a/b);
-//          break;   
+//          break;
 //       case 'e':
 //          printf("you pressed end");
-//          break;  
-//       default: 
+//          break;
+//       default:
 //          printf("you pressed !--");
 //          break;
 //      }
@@ -643,13 +643,13 @@ o/p=123123
 //given matrices of 0 and 1 find all sub matrices that are all ones
 
 //get character as input using scanf getchar using getch
-// write the fucntion prototype for getch getche and getchar 
+// write the fucntion prototype for getch getche and getchar
 //get the input from one string without spaces using scanf gets
-//one input of a string with spaces 
+//one input of a string with spaces
 //paragraph as input using gets
-// get multiple paragraphs as input using gets 
+// get multiple paragraphs as input using gets
 //get input till d is pressed
-//other way of format of specifiers 
+//other way of format of specifiers
 
 // // input character
 // #include<stdio.h>
@@ -691,7 +691,7 @@ o/p=123123
 //     while(i<3){
 //         gets(paragraph[i]);
 //         printf("%s\n",paragraph[i]);
-//         i++; 
+//         i++;
 //     }
 // }
 
@@ -824,13 +824,18 @@ o/p=123123
 // }
 
 
-adding and multiping three numbers
-#include<stdio.h>
-int main(){
-    int a,b,c;
-    printf("enter the three numbers:");
-    scanf("%d%d%d",&a,&b,&c);
-    printf("the sum of three numbers is %d\n",a+b+c);
-    printf("the product of three numbers is %d\n",a*b*c);
-    return 0;
+// adding and multiping three numbers
+// #include<stdio.h>
+// int main(){
+//     int a,b,c;
+//     printf("enter the three numbers:");
+//     scanf("%d%d%d",&a,&b,&c);
+//     printf("the sum of three numbers is %d\n",a+b+c);
+//     printf("the product of three numbers is %d\n",a*b*c);
+//     return 0;
+// }
+
+#include<Stdio.h>
+void main(){
+  printf("hello world");
 }

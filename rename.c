@@ -1,4 +1,4 @@
-//recursive function to calculate the power of a given number (x^n) where x and n are both integers
+// //recursive function to calculate the power of a given number (x^n) where x and n are both integers
 
 #include<Stdio.h>
 void main(){
@@ -24,33 +24,55 @@ int power(int x,int n){
 containing the unique characters in the string, sorted in ascending order.*/
 
 #include<Stdio.h>
+#include<string.h>
+#include<stdlib.h>
+
+
+char *getUniqueChars(char *string){
+    int i = 0, j = 0, k = 0;
+    char *uniqueChars = (char *)malloc(sizeof(char) * 100);
+    while (string[i] != '\0'){
+        j = 0;
+        while (uniqueChars[j] != '\0'){
+            if (uniqueChars[j] == string[i]){
+                break;
+            }
+            j++;
+        }
+        if (uniqueChars[j] == '\0'){
+            uniqueChars[k] = string[i];
+            k++;
+        }
+        i++;
+    }
+    uniqueChars[k] = '\0';
+    return uniqueChars;
+}
+
 void main(){
     char str[100];
     printf("enter a string:");
     gets(str);
-    char *ptr=unique(str);
-    printf("the unique characters are:");
-    puts(ptr);
+    char *ptr=getUniqueChars(str);
+    sort(ptr);
+ 
 }
 
-char *unique(char str[]){
-    int i,j,k;
-    char *ptr;
-    ptr=(char *)malloc(100*sizeof(char));
-    for(i=0;str[i]!='\0';i++){
-        for(j=0;str[j]!='\0';j++){
-            if(str[i]==str[j]){
-                break;
+void sorted(char *ptr){
+    int i,j;
+    char temp;
+    for(i=0;ptr[i]!='\0';i++){
+        for(j=0;ptr[j]!='\0';j++){
+            if(ptr[i]>ptr[j]){
+                temp=ptr[i];
+                ptr[i]=ptr[j];
+                ptr[j]=temp;
             }
         }
-        if(i==j){
-            ptr[k]=str[i];
-            k++;
-        }
     }
-    return ptr;
+    printf("the sorted string is:");
+    puts(ptr);
 }
-
 
 /* Write a function that accepts a two-dimensional array of integers and returns the transpose of the
 array (rows become columns and vice versa) without malloc.*/
@@ -84,6 +106,9 @@ void transpose(int arr[100][100],int m,int n){
 /*Write a function that accepts a string and returns the longest palindrome substring in the string.*/
 
 #include<Stdio.h>
+#include<string.h>
+#include<stdlib.h>
+
 void main(){
     char str[100];
     printf("enter a string:");
@@ -344,3 +369,29 @@ float *avg(float arr[100][100],int m,int n){
     }
     return ptr;
 }
+//create a nested stucture for student name and address
+#include<Stdio.h>
+struct address{
+    char city[100];
+    char state[100];
+    int pin;
+};
+struct student{
+    char name[100];
+    struct address add;
+};
+void main(){
+    struct student s1;
+    printf("enter the name of the student:");
+    gets(s1.name);
+    printf("enter the city of the student:");
+    gets(s1.add.city);
+    printf("enter the state of the student:");
+    gets(s1.add.state);
+    printf("enter the pin of the student:");
+    scanf("%d",&s1.add.pin);
+    printf("the name of the student is:%s\n",s1.name);
+    printf("the city of the student is:%s\n",s1.add.city);
+    printf("the state of the student is:%s\n",s1.add.state);
+    printf("the pin of the student is:%d\n",s1.add.pin);
+}+  
