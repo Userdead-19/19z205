@@ -1,59 +1,14 @@
-
-/*Write a function that accepts a string and returns the longest palindrome substring in the string.*/
-#include <stdio.h>
-#include <string.h>
-
-int isPalindrome(char str[], int start, int end) {
-    while (start < end) {
-        if (str[start] != str[end]) {
-            return 0; // Not a palindrome
-        }
-        start++;
-        end--;
-    }
-    return 1; // Palindrome
+#include<Stdio.h>
+#include<math.h>
+void main(){
+    int x,n;
+    printf("enter the value of x and n:");
+    scanf("%d%d",&x,&n);
+    int result=power(x,n);
+    printf("the result is %d",result);
 }
 
-void longestPalindromeSubstring(char str[]) {
-    int len = strlen(str);
-    int maxLength = 1;
-    int start = 0;
-    int i, j;
-
-    // Check for odd length palindromes
-    for (i = 0; i < len; i++) {
-        for (j = i; j < len; j++) {
-            if (j - i + 1 > maxLength && isPalindrome(str, i, j)) {
-                maxLength = j - i + 1;
-                start = i;
-            }
-        }
-    }
-
-    // Check for even length palindromes
-    for (i = 0; i < len; i++) {
-        for (j = i + 1; j < len; j++) {
-            if (j - i + 1 > maxLength && isPalindrome(str, i, j)) {
-                maxLength = j - i + 1;
-                start = i;
-            }
-        }
-    }
-
-    printf("Longest palindrome substring: ");
-    for (i = start; i < start + maxLength; i++) {
-        printf("%c", str[i]);
-    }
+int power(int x,int n){
+    int x=math.pow(x,n);
+    return x;
 }
-
-int main() {
-    char str[100];
-    printf("Enter a string: ");
-    fgets(str, sizeof(str), stdin);
-    str[strcspn(str, "\n")] = '\0'; // Remove the trailing newline character
-
-    longestPalindromeSubstring(str);
-    return 0;
-}
-
-
