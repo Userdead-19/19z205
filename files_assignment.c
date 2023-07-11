@@ -79,22 +79,22 @@
 // Write a program in C to calculate the average of numbers stored in a file.
 
 #include<Stdio.h>
-#include<stdlib.h>
-void main(){
-    FILE *fptr;
-    int num;
-    fptr=fopen("numbers.txt","r");
-    if(fptr==NULL){
-        printf("file not found");
-        exit(1);
-    }
-    int sum=0;
-    int count=0;
-    while(fscanf(fptr,"%d",&num)!=NULL){
-        sum=sum+num;
-        count++;
-    }
-    printf("the average is %d",sum/count);
-    fclose(fptr);
+// #include<stdlib.h>
+// void main(){
+//     FILE *fptr;
+//     int num;
+//     fptr=fopen("numbers.txt","r");
+//     if(fptr==NULL){
+//         printf("file not found");
+//         exit(1);
+//     }
+//     int sum=0;
+//     int count=0;
+//     while(fscanf(fptr,"%d",&num)!=NULL){
+//         sum=sum+num;
+//         count++;
+//     }
+//     printf("the average is %d",sum/count);
+//     fclose(fptr);
 
-}
+// }
