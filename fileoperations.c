@@ -233,7 +233,95 @@
 //     printf("the size of the union is %d",sizeof(st));
 // }
 
+
+// #include<stdio.h>
+// #include<string.h>
+
+
+// int main()
+// {
+//     int n;
+//     char str[100], temp[100][100], temp1[100];// no of sentences, letters
+//     printf("Enter the number of lines: ");
+//     scanf("%d",&n);
+//     getchar();
+//     FILE *fptr;
+//     fptr = fopen("hello.txt","w");
+//     for(int i=0;i<n;i++)
+//     {
+//         fgets(str, sizeof(str),stdin);
+//         fputs(str,fptr);
+//     }
+//     fclose(fptr);
+//     fptr = fopen("hello.txt","r");
+//     for (int i = 0; i < n; i++)
+//     {
+//         fgets(temp[i], sizeof(temp[i]),fptr);
+//     }
+//     fclose(fptr);
+//     for (int i = 0; i < n-1; i++)
+//     {
+//         for(int j=i; j< n;j++)
+//         if(strcmp(temp[i],temp[j])>0)
+//         {
+//             strcpy(temp1,temp[i]);
+//             strcpy(temp[i],temp[j]);
+//             strcpy(temp[j], temp1);
+//         }
+//     }
+
+
+//     fptr = fopen("hello.txt", "w");
+//     for (int i = 0; i < n; i++)
+//     {
+//         fputs(temp[i], fptr);
+//     }
+
+//     fclose(fptr);
+
+
+//     fptr = fopen("hello.txt", "r");
+//     printf("\n");
+//     for (int i = 0; i < n; i++)
+//     {
+//         fgets(temp1,sizeof(temp1),fptr);
+//         fputs(temp1,stdout);
+//     }
+//     fclose(fptr);
+
+
+// }
+
+//strcmp of two strings given by the user
+// #include<stdio.h>
+// #include<string.h>
+// void main(){
+//     char str1[100],str2[100];
+//     printf("enter the first string:");
+//     scanf("%s",str1);
+//     printf("enter the second string:");
+//     scanf("%s",str2);
+//     int i=0;
+//     while(str1[i]==str2[i]&&str1[i]!='\0'&&str2[i]!='\0'){
+//         i++;
+    
+//     if(str1[i]>str2[i]){
+//         printf("the first string is greater than the second string");
+//         break;
+//     }
+//     else if(str1[i]<str2[i]){
+//         printf("the second string is greater than the first string");
+//         break;
+//     }
+//     else{
+//         printf("the two strings are equal");
+//         break;  
+//     }
+// }
+// }  
+
+
 #include<stdio.h>
-void main(int args,char *argv[]){
-   printf("hello world");  
+void main(int argc,char *argv[]){
+   printf("the number of arguments are %s\n",argv[1]);
 }
