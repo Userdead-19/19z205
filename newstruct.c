@@ -35,25 +35,26 @@
 // }
 
 //fwrite() a array of structures
-#include<stdio.h>
-void main(){
-    struct class{
-        char name[100];
-        int rollno;
-        int marks;
-    };
-    struct class student[3];
-    FILE *fptr;
-    fptr=fopen("cfile.bin","wb");
-    for(int i=0;i<3;i++){
-        printf("enter the name of the student:");
-        gets(student[i].name);
-        printf("enter the rollno of the student:");
-        scanf("%d",&student[i].rollno);
-        printf("enter the marks of the student:");
-        scanf("%d",&student[i].marks);
-        fflush(stdin);
-    }
-    fwrite(student,sizeof(student),3,fptr);
-    fclose(fptr);
-}
+// #include<stdio.h>
+// void main(){
+//     struct class{
+//         char name[100];
+//         int rollno;
+//         int marks;
+//     };
+//     struct class student[3];
+//     FILE *fptr;
+//     fptr=fopen("cfile.bin","wb");
+//     for(int i=0;i<3;i++){
+//         printf("enter the name of the student:");
+//         gets(student[i].name);
+//         printf("enter the rollno of the student:");
+//         scanf("%d",&student[i].rollno);
+//         printf("enter the marks of the student:");
+//         scanf("%d",&student[i].marks);
+//         fflush(stdin);
+//     }
+//     fwrite(student,sizeof(student),3,fptr);
+//     fclose(fptr);
+// }
+
