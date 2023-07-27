@@ -69,3 +69,4 @@
 //   printf("The cost of the product is %d\n", ptr[i].costofproduct);
 // }
 // }
+

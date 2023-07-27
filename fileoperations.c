@@ -114,7 +114,7 @@
 // after writing it into the files total students and average marks of the students in each subjects
 
 
-// #include<stdio.h>
+//  #include<stdio.h>
 // void main(){
 //     FILE *fptr;
 //     fptr=fopen("students.txt","w");
@@ -128,7 +128,7 @@
 //     scanf("%d",&num);
 //     int total=0;
 //     struct students st[num];
-//     for(int i=0;i<num;i++){
+//     for(int i=0;i<num;i++){  
 //         printf("enter the name:");
 //         scanf("%s",st[i].name);
 //         printf("enter the roll no:");
@@ -333,5 +333,3 @@
 
 //     return 0;
 // }
-
-
