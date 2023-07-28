@@ -288,3 +288,291 @@
 //     printf("%d",x);
 // }
 
+
+// matrix multiplication using pointers and storing using pointer
+
+// #include<Stdio.h>
+// void main(){
+//     int row1,column1,row2,column2;
+//     printf("enter the number of rows and columns of the first matrix:");
+//     scanf("%d%d",&row1,&column1);
+//     printf("enter the number of rows and columns of the second matrix:");
+//     scanf("%d%d",&row2,&column2);
+//     if(column1!=row2){
+//         printf("matrix multiplication is not possible");
+//     }
+//     else{
+//         int a[row1][column1],b[row2][column2],c[row1][column2];
+//         for(int i=0;i<row1;i++){
+//             for(int j=0;j<column1;j++){
+//                 printf("enter the element:");
+//                 scanf("%d",&a[i][j]);
+//             }
+//         }
+//         for(int i=0;i<row2;i++){
+//             for(int j=0;j<column2;j++){
+//                 printf("enter the element:");
+//                 scanf("%d",&b[i][j]);
+//             }
+//         }
+//         int *p,*q,*r;
+//         p=&a[0][0];
+//         q=&b[0][0];
+//         r=&c[0][0];
+//         multiply(p,q,r,row1,column1,column2);
+//     }
+// }
+
+// void multiply(int *p,int *q,int *r,int row1,int column1,int column2){
+//     int sum=0;
+//     for(int i=0;i<row1;i++){
+//         for(int j=0;j<column2;j++){
+//             for(int k=0;k<column1;k++){
+//                 sum=sum+(*(p+i*column1+k))*(*(q+k*column2+j));
+//             }
+//             *(r+i*column2+j)=sum;
+//             sum=0;
+//         }
+//     }
+//     for(int i=0;i<row1;i++){
+//         for(int j=0;j<column2;j++){
+//             printf("%d ",*(r+i*column2+j));
+//         }
+//         printf("\n");
+//     }
+// }
+
+
+//transpose of a matrix using pointer
+// #include <stdio.h>
+
+// // Function prototype
+// void transpose(int *src, int *dest, int rows, int columns);
+
+// int main() {
+//     int rows, columns;
+//     printf("Enter the number of rows and columns of the matrix: ");
+//     scanf("%d%d", &rows, &columns);
+
+//     int matrix[rows][columns];
+//     printf("Enter the elements of the matrix:\n");
+//     for (int i = 0; i < rows; i++) {
+//         for (int j = 0; j < columns; j++) {
+//             scanf("%d", &matrix[i][j]);
+//         }
+//     }
+
+//     int transposedMatrix[columns][rows];
+//     transpose(&matrix[0][0], &transposedMatrix[0][0], rows, columns);
+
+//     printf("Transposed matrix:\n");
+//     for (int i = 0; i < columns; i++) {
+//         for (int j = 0; j < rows; j++) {
+//             printf("%d ", transposedMatrix[i][j]);
+//         }
+//         printf("\n");
+//     }
+
+//     return 0;
+// }
+
+// void transpose(int *src, int *dest, int rows, int columns) {
+//     for (int i = 0; i < rows; i++) {
+//         for (int j = 0; j < columns; j++) {
+//             *(dest + j * rows + i) = *(src + i * columns + j);
+//         }
+//     }
+// }
+
+
+// #include<stdio.h>
+// int main()
+// {
+//     printf("the value %d\n",2*9+3/2.0);
+// }
+
+//swapping two rows in a matrix using pointers
+
+// #include<Stdio.h>
+// void main(){
+//     int row,column;
+//     printf("enter the number of rows and columns of the matrix:");
+//     scanf("%d%d",&row,&column);
+//     int a[row][column];
+//     for(int i=0;i<row;i++){
+//         for(int j=0;j<column;j++){
+//             printf("enter the element:");
+//             scanf("%d",&a[i][j]);
+//         }
+
+//     }
+//     int *p;
+//     p=&a[0][0];
+//     swap(p,row,column);
+// }
+
+// void swap(int *p,int row,int column){
+//     int b[row][column];
+//     int r1,r2;
+//     printf("enter the row numbers to be swapped:");
+//     scanf("%d%d",&r1,&r2);
+//     for(int i=0;i<row;i++){
+//         for(int j=0;j<column;j++){
+//             if(i==r1-1){
+//                 b[r2-1][j]=*(p+i*column+j);
+//             }
+//             else if(i==r2-1){
+//                 b[r1-1][j]=*(p+i*column+j);
+//             }
+//             else{
+//                 b[i][j]=*(p+i*column+j);
+//             }
+//         }
+//     }
+//     for(int i=0;i<row;i++){
+//         for(int j=0;j<column;j++){
+//             printf("%d ",b[i][j]);
+//         }
+//         printf("\n");
+//     }
+// }
+
+
+// #include <stdio.h>
+
+// // Function prototype
+// void swapRows(int *row1, int *row2, int columns);
+
+// int main() {
+//     int rows, columns;
+//     printf("Enter the number of rows and columns of the matrix: ");
+//     scanf("%d%d", &rows, &columns);
+
+//     int matrix[rows][columns];
+//     printf("Enter the elements of the matrix:\n");
+//     for (int i = 0; i < rows; i++) {
+//         for (int j = 0; j < columns; j++) {
+//             scanf("%d", &matrix[i][j]);
+//         }
+//     }
+
+//     int row1, row2;
+//     printf("Enter the row numbers (starting from 0) to swap: ");
+//     scanf("%d%d", &row1, &row2);
+
+//     if (row1 >= 0 && row1 < rows && row2 >= 0 && row2 < rows) {
+//         swapRows(&matrix[row1][0], &matrix[row2][0], columns);
+
+//         printf("Matrix after swapping rows %d and %d:\n", row1, row2);
+//         for (int i = 0; i < rows; i++) {
+//             for (int j = 0; j < columns; j++) {
+//                 printf("%d ", matrix[i][j]);
+//             }
+//             printf("\n");
+//         }
+//     } else {
+//         printf("Invalid row numbers. Please enter valid row numbers within the range (0 to %d).\n", rows - 1);
+//     }
+
+//     return 0;
+// }
+
+// void swapRows(int *row1, int *row2, int columns) {
+//     for (int i = 0; i < columns; i++) {
+//         int temp = *(row1 + i);
+//         *(row1 + i) = *(row2 + i);
+//         *(row2 + i) = temp;
+//     }
+// }
+
+// give a program to read text from a file and write it to another file in lower case
+// #include<stdio.h>
+// #include<ctype.h>
+// void main(){
+//     FILE *fp1,*fp2;
+//     char ch;
+//     fp1=fopen("file1.txt","r");
+//     fp2=fopen("file2.txt","w");
+//     while((ch=fgetc(fp1))!=EOF){
+//         fputc(tolower(ch),fp2);
+//     }
+//     fclose(fp1);
+//     fclose(fp2);
+// }
+
+
+
+// //give a c program to perform multiplication operation on two complex numbers 
+// #include<stdio.h>
+// struct complex{
+//     int real;
+//     int imaginary;
+// };
+// void main(){
+//     struct complex c1,c2,c3;
+//     printf("enter the real and imaginary part of the first complex number:");
+//     scanf("%d%d",&c1.real,&c1.imaginary);
+//     printf("enter the real and imaginary part of the second complex number:");
+//     scanf("%d%d",&c2.real,&c2.imaginary);
+//     c3.real=c1.real*c2.real-c1.imaginary*c2.imaginary;
+//     c3.imaginary=c1.real*c2.imaginary+c1.imaginary*c2.real;
+//     printf("the product of the two complex numbers is %d+i%d",c3.real,c3.imaginary);
+// }
+
+
+// // compare two complex numbers and return the smallest one
+
+// #include<stdio.h>
+// struct complex{
+//     int real;
+//     int imaginary;
+// };
+// void main(){
+//     struct complex c1,c2;
+//     printf("enter the real and imaginary part of the first complex number:");
+//     scanf("%d%d",&c1.real,&c1.imaginary);
+//     printf("enter the real and imaginary part of the second complex number:");
+//     scanf("%d%d",&c2.real,&c2.imaginary);
+//     if(c1.real<c2.real){
+//         printf("the first complex number is smaller");
+//     }
+//     else if(c1.real>c2.real){
+//         printf("the second complex number is smaller");
+//     }
+//     else{
+//         if(c1.imaginary<c2.imaginary){
+//             printf("the first complex number is smaller");
+//         }
+//         else if(c1.imaginary>c2.imaginary){
+//             printf("the second complex number is smaller");
+//         }
+//         else{
+//             printf("both the complex numbers are equal");
+//         }
+//     }
+// }
+
+
+// #include <stdio.h>
+
+// int main(void)
+// {
+//     int a = 5, b = 6;
+//     printf("~a = %d\n", b||a);
+// }
+
+// #include<Stdio.h>
+// void main(){
+//     FILE *fp;
+//     char a;
+//     fp=fopen("cfile.txt","r");
+//     a=fseek(fp,0,SEEK_END);
+//     printf("%d",a);
+// }
+
+how to read a file in c using fseek
+
+#include<stdio.h>
+main(){
+    
+}

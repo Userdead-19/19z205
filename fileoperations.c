@@ -333,3 +333,36 @@
 
 //     return 0;
 // }
+
+
+// #include<Stdio.h>
+// struct cylinder{
+//     float radius;
+//     float height;
+//     float pi=3.14;
+// }
+// void main(){
+//     struct cylinder cy;
+//     int n;
+//     input();
+//     printf("enter the opertion to be performed:");
+//     scanf("%d",&n);
+//     switch(n){
+//         case 1:
+//           TSA();
+//           break;
+//         case 2:
+//           CSA():
+//           break;
+//         default:
+//           break;   
+//     }
+// }
+
+// void input(){
+//     struct cylinder cy;
+//     printf("enter the radius:");
+//     scanf("%f",&cy.radius);
+//     printf("enter the height:");
+//     scanf("%f",&cy.height);
+// }
