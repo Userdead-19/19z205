@@ -570,9 +570,36 @@
 //     printf("%d",a);
 // }
 
-how to read a file in c using fseek
 
-#include<stdio.h>
-main(){
-    
-}
+//comparing two structures
+
+// #include<stdio.h>
+// struct student{
+//     char name[20];
+//     int roll;
+//     int marks;
+// };
+// void main(){
+//     struct student s1,s2;
+//     printf("enter the name of the first student:");
+//     scanf("%s",s1.name);
+//     printf("enter the roll number of the first student:");
+//     scanf("%d",&s1.roll);
+//     printf("enter the marks of the first student:");
+//     scanf("%d",&s1.marks);
+//     printf("enter the name of the second student:");
+//     scanf("%s",s2.name);
+//     printf("enter the roll number of the second student:");
+//     scanf("%d",&s2.roll);
+//     printf("enter the marks of the second student:");
+//     scanf("%d",&s2.marks);
+//     if(s1.marks>s2.marks){
+//         printf("the first student has scored more marks");
+//     }
+//     else if(s1.marks<s2.marks){
+//         printf("the second student has scored more marks");
+//     }
+//     else{
+//         printf("both the students have scored equal marks");
+//     }
+// }
